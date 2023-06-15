@@ -1,0 +1,9 @@
+div.card {
+    background-color: lightgray;
+    width: 150px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    margin: 40px;
+    padding: 50px 0;
+    line-height: 20px;
+}

@@ -1,0 +1,17 @@
+div.header {
+    width: 100%;
+    background-color: #57f;
+    color: #fff;
+    box-shadow: 0px 5px 3px rgba(0, 0, 0, 0.5);
+    padding: 10px 0px;
+}
+
+div.header>div:nth-child(1) {
+    padding: 5px 5px;
+    font-size: 1.5rem;
+}
+
+div.header>div:nth-child(2) {
+    padding: 5px 5px;
+    font-size: 1.0rem;
+}
