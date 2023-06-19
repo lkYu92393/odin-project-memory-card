@@ -28,8 +28,11 @@ const MemoryCard = () => {
     const getRandomNumList = (length) => {
 
         let tempList = [];
-        for (let i = 0; i < length; i++) {
-            tempList.push(getRandomInt(91));
+        while (tempList.length < length) {
+            let num = getRandomInt(91);
+            if (!tempList.includes(num)) {
+                tempList.push(num);
+            }
         }
         return tempList;
     }
