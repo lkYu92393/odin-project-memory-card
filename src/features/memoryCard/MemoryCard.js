@@ -29,7 +29,7 @@ const MemoryCard = () => {
 
         let tempList = [];
         for (let i = 0; i < length; i++) {
-            tempList.push(getRandomInt(1000));
+            tempList.push(getRandomInt(91));
         }
         return tempList;
     }
