@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Header from "../../components/header/Header";
 import Card from "./components/card/Card";
-import { getRandomInt } from "../../lib/common";
+import { getRandomInt } from "../../libs/common";
 
 import "./memoryCard.css";
 
