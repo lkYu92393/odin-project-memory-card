@@ -5,6 +5,14 @@ import { getRandomInt } from "../../lib/common";
 
 import "./memoryCard.css";
 
+const initHistScore = () => {
+    let base = 0;
+    if (localStorage.getItem("hist")) {
+        base = localStorage.getItem("hist");
+    }
+    return base;
+}
+
 const MemoryCard = () => {
     const [data, setData] = useState({
         gameStart: false
@@ -13,7 +21,7 @@ const MemoryCard = () => {
         , randomNum: []
         , clickedNum: []
         , score: 0
-        , hist: 0
+        , hist: initHistScore()
     });
 
     const shuffleNum = ((list = data.randomNum) => {
@@ -69,6 +77,7 @@ const MemoryCard = () => {
                     , score: ++data.score
                     , hist: data.hist > data.score ? data.hist : data.score
                 })
+                localStorage.setItem("hist", data.hist)
             } else {
                 setData({
                     ...data
@@ -76,6 +85,7 @@ const MemoryCard = () => {
                     , score: ++data.score
                     , hist: data.hist > data.score ? data.hist : data.score
                 });
+                localStorage.setItem("hist", data.hist)
             }
         }
     }
